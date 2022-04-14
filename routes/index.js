@@ -40,6 +40,8 @@ router.post('/first-session' , (req,res) => {
 })
 
 router.post('/second-session' , (req,res) => {
+  // const reqAnswer = 'nearby';
+  // const answer = req.body.answer.toLowerCase()
   const answer = 2222;
   if(req.body.answer == answer) {
     res.render('third-session')
@@ -63,6 +65,15 @@ router.post('/fourth-session' , (req,res) => {
     res.render('fifth-session')
   } else {
     res.redirect('/fourth-session')
+  }
+})
+
+router.post('/fifth-session' , (req,res) => {
+  const answer = 5555;
+  if(req.body.answer == answer) {
+    res.render('final-session')
+  } else {
+    res.redirect('/fifth-session')
   }
 })
 
