@@ -31,14 +31,39 @@ router.get('/final-session' , (req,res) => {
 })
 
 router.post('/first-session' , (req,res) => {
-  console.log(req.body);
-  const answer = 1234;
+  const answer = 1111;
   if(req.body.answer == answer) {
     res.render('second-session')
   } else {
     res.redirect('/first-session')
   }
+})
 
+router.post('/second-session' , (req,res) => {
+  const answer = 2222;
+  if(req.body.answer == answer) {
+    res.render('third-session')
+  } else {
+    res.redirect('/second-session')
+  }
+})
+
+router.post('/third-session' , (req,res) => {
+  const answer = 3333;
+  if(req.body.answer == answer) {
+    res.render('fourth-session')
+  } else {
+    res.redirect('/third-session')
+  }
+})
+
+router.post('/fourth-session' , (req,res) => {
+  const answer = 4444;
+  if(req.body.answer == answer) {
+    res.render('fifth-session')
+  } else {
+    res.redirect('/fourth-session')
+  }
 })
 
 module.exports = router;
