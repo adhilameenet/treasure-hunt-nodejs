@@ -32,6 +32,7 @@ router.get('/final-session' , (req,res) => {
 
 router.post('/first-session' , (req,res) => {
   const answer = 1111;
+  var verifyAuth = false ;
   if(req.body.answer == answer) {
     res.render('second-session')
   } else {
