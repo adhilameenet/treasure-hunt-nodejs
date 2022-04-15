@@ -1,80 +1,92 @@
 var express = require('express');
 var router = express.Router();
 
+// @GET
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index');
 });
 
-router.get('/first-session' , (req,res) => {
-  res.render('first-session')
+router.get('/e3jk2' , (req,res) => {
+  res.render('e3jk2')
 })
 
-router.get('/second-session' , (req,res) => {
-  res.render('second-session')
+router.get('/f45ej' , (req,res) => {
+  res.render('f45ej')
 })
 
-router.get('/third-session' , (req,res) => {
-  res.render('third-session')
+router.get('/hj4k2' , (req,res) => {
+  res.render('hj4k2')
 })
 
-router.get('/fourth-session' , (req,res) => {
-  res.render('fourth-session')
+router.get('/k3j2e' , (req,res) => {
+  res.render('k3j2e')
 })
 
-router.get('/fifth-session' , (req,res) => {
-  res.render('fifth-session')
+router.get('/p3d2e' , (req,res) => {
+  res.render('p3d2e')
 })
 
-router.get('/final-session' , (req,res) => {
-  res.render('final-session')
+router.get('/re32f' , (req,res) => {
+  res.render('re32f')
 })
 
-router.post('/first-session' , (req,res) => {
-  const answer = 1111;
-  var verifyAuth = false ;
-  if(req.body.answer == answer) {
-    res.render('second-session')
+
+
+// @POST
+
+router.post('/start', (req,res) => {
+  if(req.body.answer) {
+    res.render('e3jk2')
   } else {
-    res.redirect('/first-session')
+    res.render('e3jk2')
   }
 })
 
-router.post('/second-session' , (req,res) => {
+router.post('/first' , (req,res) => {
+  const answer = 1111;
+  if(req.body.answer == answer) {
+    res.render('f45ej')
+  } else {
+    res.redirect('/e3jk2')
+  }
+})
+
+router.post('/second' , (req,res) => {
   // const reqAnswer = 'nearby';
   // const answer = req.body.answer.toLowerCase()
   const answer = 2222;
   if(req.body.answer == answer) {
-    res.render('third-session')
+    res.render('hj4k2')
   } else {
-    res.redirect('/second-session')
+    res.redirect('/f45ej')
   }
 })
 
-router.post('/third-session' , (req,res) => {
+router.post('/third' , (req,res) => {
   const answer = 3333;
   if(req.body.answer == answer) {
-    res.render('fourth-session')
+    res.render('k3j2e')
   } else {
-    res.redirect('/third-session')
+    res.redirect('/hj4k2')
   }
 })
 
-router.post('/fourth-session' , (req,res) => {
+router.post('/fourth' , (req,res) => {
   const answer = 4444;
   if(req.body.answer == answer) {
-    res.render('fifth-session')
+    res.render('p3d2e')
   } else {
-    res.redirect('/fourth-session')
+    res.redirect('/k3j2e')
   }
 })
 
-router.post('/fifth-session' , (req,res) => {
+router.post('/fifth' , (req,res) => {
   const answer = 5555;
   if(req.body.answer == answer) {
-    res.render('final-session')
+    res.render('re32f')
   } else {
-    res.redirect('/fifth-session')
+    res.redirect('/p3d2e')
   }
 })
 
