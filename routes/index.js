@@ -35,14 +35,6 @@ router.get('/re32f' , (req,res) => {
 
 // @POST
 
-router.post('/start', (req,res) => {
-  if(req.body.answer) {
-    res.render('e3jk2')
-  } else {
-    res.render('e3jk2')
-  }
-})
-
 router.post('/first' , (req,res) => {
   const answer = 1111;
   if(req.body.answer == answer) {
