@@ -27,28 +27,33 @@ router.get('/p3d2e' , (req,res) => {
   res.render('p3d2e')
 })
 
+router.get('/qsd4e' , (req,res) => {
+  res.render('qsd4e')
+})
+
 router.get('/re32f' , (req,res) => {
   res.render('re32f')
 })
 
 
 
+
 // @POST
 
 router.post('/first' , (req,res) => {
-  const answer = 1111;
+  const answer = 82;
   if(req.body.answer == answer) {
     res.render('f45ej')
   } else {
+    // alert('Wrong Answer')
     res.redirect('/e3jk2')
   }
 })
 
 router.post('/second' , (req,res) => {
-  // const reqAnswer = 'nearby';
-  // const answer = req.body.answer.toLowerCase()
-  const answer = 2222;
-  if(req.body.answer == answer) {
+  const reqAnswer = 'cemetery';
+  const answer = req.body.answer.toLowerCase()
+  if(reqAnswer == answer) {
     res.render('hj4k2')
   } else {
     res.redirect('/f45ej')
@@ -56,8 +61,9 @@ router.post('/second' , (req,res) => {
 })
 
 router.post('/third' , (req,res) => {
-  const answer = 3333;
-  if(req.body.answer == answer) {
+  const reqAnswer = 'samuel taylor coleridge';
+  const answer = req.body.answer.toLowerCase()
+  if(reqAnswer == answer) {
     res.render('k3j2e')
   } else {
     res.redirect('/hj4k2')
@@ -65,8 +71,9 @@ router.post('/third' , (req,res) => {
 })
 
 router.post('/fourth' , (req,res) => {
-  const answer = 4444;
-  if(req.body.answer == answer) {
+  const reqAnswer = 'unesco';
+  const answer = req.body.answer.toLowerCase()
+  if(reqAnswer == answer) {
     res.render('p3d2e')
   } else {
     res.redirect('/k3j2e')
@@ -74,12 +81,23 @@ router.post('/fourth' , (req,res) => {
 })
 
 router.post('/fifth' , (req,res) => {
-  const answer = 5555;
-  if(req.body.answer == answer) {
-    res.render('re32f')
+  const reqAnswer = 'ekata';
+  const answer = req.body.answer.toLowerCase()
+  if(reqAnswer == answer) {
+    res.render('qsd4e')
   } else {
     res.redirect('/p3d2e')
   }
 })
+
+router.post('/sixth' , (req,res) => {
+  const answer = 1959;
+  if(req.body.answer == answer) {
+    res.render('re32f')
+  } else {
+    res.redirect('/qsd4e')
+  }
+})
+
 
 module.exports = router;
