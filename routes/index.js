@@ -49,7 +49,6 @@ router.post('/first' , (req,res) => {
   if(req.body.answer == answer) {
     res.render('f45ej')
   } else {
-    // alert('Wrong Answer')
     res.redirect('/e3jk2')
   }
 })
